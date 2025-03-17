@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+import { motion } from 'framer-motion';
+
+---
+
+<nav class='w-1/2'>
+  <ul class='flex p-5 text-2xl gap-10 justify-center w-full h-auto list-none'>
+    <motion.li
+      initial={{opacity:0, y:-10}}
+      animate={{opacity:1, y:0}}
+transition={{duration:1, type:'spring', stiffness:30, ease:'easeIn'}}
+      className=''
+      client:load
+    ><a href='/'>Home</a></motion.li>
+    
+    <motion.li
+      initial={{opacity:0, y:-10}}
+      animate={{opacity:1, y:0}}
+      transition={{duration:1, delay:.5, type:'spring', stiffness:30, ease:'easeIn'}}
+      className=''
+      client:load
+    ><a href='/'>About</a></motion.li>
+    
+    <motion.li
+      initial={{opacity:0, y:-10}}
+      animate={{opacity:1, y:0}}
+      transition={{duration:1, delay:1, type:'spring', stiffness:30, ease:'easeIn'}}
+      className=''
+      client:load
+    ><a href='/chapters'>Chapters</a></motion.li>
+    </ul>
+</nav>
