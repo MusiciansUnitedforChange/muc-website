@@ -4,7 +4,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        custom: ['lexend'],
+        lexend: ['lexend'],
+      },
+      colors: {
+        primary: '#ff7e5f',
+        secondary: '#feb47b',
+        // Add more colors as needed
+
+
+
+
       },
     }, 
   },
