@@ -2,6 +2,8 @@
 import '../styles/global.css';
 
 import Frame from '../layouts/FRAME.astro';
+import ImageSlider from '../components/ImageSlider/ImageSlider.astro';
+
 import {motion} from 'framer-motion';
 
 ---
@@ -22,6 +24,11 @@ import {motion} from 'framer-motion';
         <h2> *insert layered photos* </h2>
       </div>  
 
+    </div>
+    <div class='w-full h-full bg-white flex flex-col items-center'>
+      <h1 class='text-6xl mb-5 '>Our Impact</h1>
+      <h2 class='text-3xl '>Learn about how we fund shi</h2>
+      <ImageSlider></ImageSlider>
     </div>
   </div>
 

@@ -1,0 +1,25 @@
+---
+import '../styles/global.css';
+import Frame from '../layouts/FRAME.astro';
+
+import {motion} from 'framer-motion';
+---
+
+<Frame>
+  <div class='w-screen h-screen'>
+    <div class='w-full h-full dots flex flex-col justify-center'> 
+      <div class='w-full h-3/4 flex bg-[#3d4240]'>
+        <div class='w-full h-full text-center text-white  flex items-center'>
+          <h1 class='m-20 w-auto text-7xl border-b-8 border-b-green-300'>Apply for a Grant</h1>
+        </div>
+        <form class='w-3/4 h-1/2 overflow-visible bg-white p-20 mr-20 rounded-3xl shadow-2xl shadow-black my-auto border-black border-2 flex justify-center'>
+          <label for='fname'>First Name</label>
+          <input type='text' id='fname' name='First Name'>
+          <label for='lname'>Last Name</label>
+          <input type='text' id='lname' name='Last Name'>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</Frame>
