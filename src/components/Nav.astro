@@ -29,5 +29,13 @@ import { motion } from 'framer-motion';
       className=''
       client:load
     ><a href='/chapters'>Chapters</a></motion.li>
+
+    <motion.li
+      initial = {{opacity:0, y:-10}}
+      animate = {{opacity:1, y:0}}
+      transition = {{duration:.25, delay:.5, type:'spring', stiffness :30, damping:10, ease :'easIn'}}
+      className = ''
+      client:load
+    ><a href = '/istories'>Impact Stories</a></motion.li>
     </ul>
 </nav>

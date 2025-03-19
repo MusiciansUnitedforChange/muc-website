@@ -1,0 +1,25 @@
+---
+import ImageSliderFormat from "./ImageSliderFormat.astro"
+import './ImageSlider.css'; 
+---
+
+<section class = "container">
+    <div class = "slider-wrapper">
+        <div class = "slider">  
+            <div class="slide" id="slide-1">
+                <ImageSliderFormat header="Our impact" description="we did something" page ="#slide-1"></ImageSliderFormat>
+            </div>
+            <div class="slide" id="slide-2">
+                <ImageSliderFormat header="BLAHABLAH" description="we did something" page = "#slide-2"></ImageSliderFormat>
+            </div>
+            <div class="slide" id="slide-3">
+                <ImageSliderFormat header="GOoner cooPEr" description="WE gooned" page = "#slide-3"></ImageSliderFormat>
+            </div>
+        </div>
+        <div class = "slider-nav">
+            <a href = "#slide-1"></a>
+            <a href = "#slide-2"></a>
+            <a href = "#slide-3"></a>
+        </div>
+    </div>
+</section>
