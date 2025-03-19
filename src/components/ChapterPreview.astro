@@ -3,9 +3,8 @@ import '../styles/global.css';
 
 import { motion } from 'framer-motion';
 
-const  {name, location, image, page, prim, sec }= Astro.props;
+const  {name, location, image, page  }= Astro.props;
 
-const gradient = `bg-gradient-to-b from-green-500 to-green-100`;
 
 ---
 
@@ -16,14 +15,14 @@ const gradient = `bg-gradient-to-b from-green-500 to-green-100`;
     whileHover={{scale:1.05}}
     transition={{duration:0.3, ease:'easeInOut'}} 
 
-    className=`w-full aspect-[4/3] ${gradient} flex flex-col-reverse inset-shadow-black shadow-2xl  text-center m-10 rounded-3xl`
+    className=`w-full aspect-[4/3]  flex flex-col-reverse inset-shadow-black shadow-2xl  text-center m-10 rounded-3xl`
     client:load>
-    <div class='relative w-full h-1/2 flex flex-col justify-center bg-[#EEE] rounded-b-3xl'>
+    <div class='relative w-full h-1/2 flex flex-col justify-center bg-[#EEE] rounded-b-3xl border-t-8 border-t-green-300'>
       <h1 class='text-3xl'>{name}</h1>
       <h2 class='text-2xl'>{location}</h2>
     </div>
     <div class='w-full h-full flex flex-col justify-start items-center rounded-t-3xl'>
-      <img class=`mt-10 w-[100px] h-[100px] rounded-[100%] bg-white ring-[5px] ring-green-300 ring-offset-white ring-offset-[5px]` />
+      <img src={image} class=`mt-10 w-[100px] h-[100px] rounded-[100%] ring-[5px] ring-green-300 ring-offset-white ring-offset-[5px]` />
       <h2 class='mt-10 text-2xl'>A chapter with hella goons</h2>
 
     </div>

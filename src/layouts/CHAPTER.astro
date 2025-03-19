@@ -4,9 +4,8 @@ import Frame from '../layouts/FRAME.astro';
 
 import {motion} from 'framer-motion';
 
-const {name, prim="primary", sec="secondary"} = Astro.props;
+const {name } = Astro.props;
 
-const gradient=`bg-gradient-to-b from-green-500 to-green-300`
 ---
 
 <Frame>
@@ -14,7 +13,7 @@ const gradient=`bg-gradient-to-b from-green-500 to-green-300`
     <div class=` mt-10 w-full h-1/3 flex justify-center items-center`>
       <h1 class=`text-5xl border-b-8 border-green-400 `>Fund the Future @ {name}</h1>
     </div>
-    <div class=`mt-10 w-full h-auto ${gradient}`>
+    <div class=`mt-10 w-full h-auto `>
       <h1 class='text-4xl p-10 '>Meet the Board</h1>
       <slot name="board-members"/>
     </div>

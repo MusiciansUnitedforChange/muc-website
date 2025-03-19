@@ -2,25 +2,27 @@
 import '../styles/global.css';
 
 import Frame from '../layouts/FRAME.astro';
-
+import {motion} from 'framer-motion';
 
 ---
 
 <Frame>
-  <div class='p-20 w-screen h-1/2 text-[#EEE] bg-black'>
-    <h1 class='text-9xl p-5 text-center border-b-8 border-green-500'>Fund The Future</h1>
-    <h2 class='text-3xl p-5 text-center'>Gay ahh slogan or sum</h2>
-  </div>
+  <div class='w-screen h-screen '>
+    <div class='p-20 blob w-full h-3/4 flex flex-col justify-center items-center  '>
+      <h1 class='text-9xl bg-white w-auto p-5 text-center border-b-8 border-green-300'>Fund The Future</h1>
+      <h2 class='text-3xl p-5 text-center'>slogan or sum</h2>
+    </div>
 
-  <div class='flex justify-between  w-screen h-screen'>
-    <div class='p-10 w-1/2 h-full'>
-      <h1 class='text-3xl'> About Us:</h1>
-      <h2 class='mt-10 text-2xl'> Yap yap yap yap yap yap yap yap yap</h2>
-    </div>  
-    <div class='p-10 w-1/2 h-full'>
-      <h2> *insert layered photos* </h2>
-    </div>  
+    <div class='dots flex justify-between w-full h-full'>
+      <div class='p-10 w-1/2 h-full'>
+        <h1 class='w-auto text-6xl bg-white border-b-8 border-b-green-300'> About Us:</h1>
+        <h2 class='mt-10 text-2xl'> Yap yap yap yap yap yap yap yap yap</h2>
+      </div>  
+      <div class='p-10 w-1/2 h-full'>
+        <h2> *insert layered photos* </h2>
+      </div>  
 
+    </div>
   </div>
 
 
