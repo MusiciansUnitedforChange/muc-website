@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         lexend: ['lexend'],
+        inter: ['inter'],
       },
       colors: {
         primary: '#ff7e5f',

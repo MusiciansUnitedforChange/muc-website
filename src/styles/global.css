@@ -12,6 +12,15 @@
 
 }
 
+@font-face{
+  
+  font-family:'inter';
+  src: url("../public/fonts/Inter_24pt-Bold.ttf") format('truetype');
+  font-weight:bold;
+  font-style:normal;
+
+}
+
 
 .blob { 
   background-color:#fff;

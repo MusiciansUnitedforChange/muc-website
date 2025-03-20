@@ -8,14 +8,14 @@ const  {name, location, image, page  }= Astro.props;
 
 ---
 
-<a href={page} class='block w-1/4'>
+<a href={page} class='inline-block flex justify-center w-1/4'>
   <motion.div 
     initial={{opacity:0, scale:.95}} 
     animate={{opacity:1, scale:1}}
     whileHover={{scale:1.05}}
     transition={{duration:0.3, ease:'easeInOut'}} 
 
-    className=`w-full aspect-[4/3] flex flex-col-reverse inset-shadow-black shadow-2xl text-center m-10 rounded-3xl`
+    className=`w-[500px] aspect-[6/5] flex flex-col-reverse inset-shadow-black shadow-2xl text-center m-10 rounded-3xl`
     client:load>
     <div class='relative w-full h-1/2 flex flex-col justify-center bg-[#EEE] rounded-b-3xl border-t-8 border-t-green-300'>
       <h1 class='text-3xl'>{name}</h1>
