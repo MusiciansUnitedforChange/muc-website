@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Frame from '../layouts/FRAME.astro';
+import ChapterContact from '../components/ChapterContact.jsx';
 
 import {motion} from 'framer-motion';
 
@@ -13,7 +14,7 @@ const {name, email, calendar } = Astro.props;
   <div class='w-screen h-screen'>
     <div class=` mt-10 w-full h-1/3 flex flex-col justify-center items-center`>
       <h1 class=`text-5xl border-b-8 mb-5 border-green-400 `>Fund the Future @ {name}</h1>
-      <h2 class='text-2xl font-inter'>A collection of dedicated members</h2>
+      <h2 class='text-2xl font-inter font-thin'>A collection of dedicated members</h2>
     </div>
 
     <div class=`dots mt-10 w-full h-auto `>
@@ -25,31 +26,7 @@ const {name, email, calendar } = Astro.props;
       <h1 class='text-4xl p-10 text-center'>Upcoming Meetings</h1>
       <iframe src={calendar} class='w-[1200px] aspect-[4/3] shadow-2xl shadow-black rounded-3xl p-10 mb-20'></iframe>
     </div>
-
-    <div class='w-full h-full flex justify-center '>
-      <div class='w-1/3 h-[750px] p-20 relative shadow-black shadow-2xl rounded-3xl'>
-        <h2 class='text-2xl'>Contact Our {name} Chapter</h2>
-        <h3 class='text-md font-inter'>We will do out best to respond to you within x business days.</h3>
-        
-        <form class='mt-10'>
-          <label for='name' class=""
-          >Name</label>
-          <input class="font-inter w-full border-b-2 h-10 border-b-black outline-none mb-5 " id='name' type='text' required>
-          
-          <label for='email' class=""
-          >Email</label>
-          <input class="font-inter w-full border-b-2 h-10 border-b-black outline-none mb-5" id='email' type='text' required>
-
-          <label for='message' class=""
-          >How can we help?</label>
-          <textarea class="font-inter w-full h-[250px] border-b-2 h-10 border-b-black outline-none mb-5" id='message' required></textarea>
-
-          <button class='w-[100px] h-[50px] bg-green-300 text-white rounded-3xl'>Submit</button>
-      
-        </form>
-
-      </div>
-    </div>  
+    <ChapterContact name={name} client:load/>
   </div>
 
 </Frame>
