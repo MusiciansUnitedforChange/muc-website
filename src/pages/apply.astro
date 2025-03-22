@@ -12,14 +12,86 @@ import {motion} from 'framer-motion';
         <div class='w-full h-full text-center text-white  flex items-center'>
           <h1 class='m-20 w-auto text-7xl border-b-8 border-b-green-300'>Apply for a Grant</h1>
         </div>
-        <form class='w-3/4 h-1/2 overflow-visible bg-white p-20 mr-20 rounded-3xl shadow-2xl shadow-black my-auto border-black border-2 flex justify-center'>
-          <label for='fname'>First Name</label>
-          <input type='text' id='fname' name='First Name'>
-          <label for='lname'>Last Name</label>
-          <input type='text' id='lname' name='Last Name'>
-          
+        <form action="https://formsubmit.co/johndendrick0@gmail.com" method="POST" class='w-3/4 h-1/2 overflow-visible overflow-y-auto bg-white p-10 mr-20 rounded-3xl shadow-2xl shadow-black my-auto border-black border-2 flex flex-col gap-4'>
+          <p>Fields marked with * are required</p>
+          <h1 class = 'text-3xl'>Personal Information</h1>
+<!-- names --> 
+          <div class="flex gap-4">
+            <div class="flex flex-col flex-auto">
+              <label for='fname'>First Name*</label>
+              <input type='text' id='fname' name='First Name' placeholder="John" required>
+            </div>
+            <div class="flex flex-col flex-auto">
+              <label for='lname'>Last Name*</label>
+              <input type='text' id='lname' name='Last Name' placeholder="Glizzy" required>
+            </div>
+          </div>
+<!-- email -->
+          <div class="flex flex-col">
+            <label for='email'>Email Address*</label>
+            <input type='email' id='email' name='email' placeholder="rizzler@rizzy.com" required>
+          </div>
+<!--School name + grades -->
+          <div class = "flex gap-4">
+            <div class = 'flex flex-col flex-[4]'>
+              <label for='schoolname'>School Name*</label>
+              <input type ='text' id = 'schoolName' name = 'schoolname' placeholder = "Rizz school" required>
+            </div>
+            <div class = 'flex flex-col flex-[1]'>
+              <label for ='grade'>Grade*</label>
+              <select id="grade" name="grade" class="border-2 border-black p-3 rounded-md w-full text-gray-400" 
+                onchange= "this.classList.remove('text-gray-400'); this.classList.add('text-black');">
+                <option value ="" disabled selected>Choose Grade</option>
+                <option value="9th"  class = "text-gray-900">9th</option>
+                <option value="10th" class = "text-gray-900">10th</option>
+                <option value="11th" class = "text-gray-900">11th</option>
+                <option value="12th" class = "text-gray-900">12th</option>
+              </select>
+            </div>
+          </div>
+<!-- Grant Details begin -->
+          <h1 class = 'text-3xl'>Grant Details</h1>
+<!-- ClubName + Amount requested -->
+          <div class = 'flex gap-4'>
+            <div class = 'flex flex-col flex-[4]'>
+              <label for = 'ClubName'>Club or Program Name*</label>
+              <input type="text" id="ClubName" name = "ClubName" placeholder = "What is the name of your club or program?" required>
+            </div>
+            <div class = 'flex flex-col flex-[1]'>
+              <label for = 'Money'>Amount Requested($)*</label>
+              <input type = 'number' id = 'Money' name = 'Money' placeholder ="0.00" required>
+            </div>
+          </div>
+<!-- Purpose -->
+          <div class = 'flex flex-col'>
+            <label for = "Purpose">Purpose of Funding*</label>
+            <textarea id = 'Purpose' name = "Purpose" placeholder="Please describe what you will use the grant to achieve."></textarea>
+          </div>
+          <div class = 'flex flex-col'>
+<!-- SUBMIT!!!! -->
+            <button type ='submit' class = "border-2 border-black p-3 rounded-md w-1/4" >Submit</button>
+          </div>
         </form>
       </div>
     </div>
   </div>
 </Frame>
+
+<style> 
+  textarea{
+    width: 100%;
+    height: 120px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 4px;
+    resize: none;
+  }
+  input{
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 4px;
+    resize: none;
+  }
+</style>
