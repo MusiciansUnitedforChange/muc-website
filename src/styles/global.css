@@ -22,6 +22,18 @@
 }
 
 
+@font-face{
+  
+  font-family:'inter';
+  src: url("../public/fonts/Inter_24pt-Light.ttf") format('truetype');
+  font-weight:thin;
+  font-style:normal;
+
+}
+
+
+
+
 .blob { 
   background-color:#fff;
   background-size: fit;
