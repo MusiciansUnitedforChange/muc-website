@@ -6,13 +6,14 @@ import {motion} from 'framer-motion';
 ---
 
 <Frame>
-  <div class='w-screen h-screen'>
-    <div class='w-full h-full dots flex flex-col justify-center'> 
-      <div class='w-full h-3/4 flex bg-[#3d4240]'>
-        <div class='w-full h-full text-center text-white  flex items-center'>
-          <h1 class='m-20 w-auto text-7xl border-b-8 border-b-green-300'>Apply for a Grant</h1>
+  <div class='w-full h-screen bg-[#3d4240] '>
+    <div class='w-full h-full  flex flex-col justify-center'> 
+      <div class='w-full h-auto flex bg-[#3d4240]'>
+        <div class='w-ful h-full text-center text-white flex flex-col justify-center items-center'>
+          <h1 class='m-20 mb-0 w-auto text-7xl border-b-8 border-b-green-300'>Apply for a Grant</h1>
+          <h2 class='font-inter font-thin text-xl text-white mt-5 w-3/4'>It is our goal to make the funding process as simple and accessible as possible, so your ideas are not fettered by the chains of financial burden.</h2>
         </div>
-        <form action="https://formsubmit.co/johndendrick0@gmail.com" method="POST" class='w-3/4 h-1/2 overflow-visible overflow-y-auto bg-white p-10 mr-20 rounded-3xl shadow-2xl shadow-black my-auto border-black border-2 flex flex-col gap-4'>
+        <form action="https://formsubmit.co/johndendrick0@gmail.com" method="POST" class='w-3/4 h-auto overflow-visible overflow-y-auto bg-white font-inter font-bold p-10 mr-20 mt-[250px] rounded-3xl shadow-[0_50px_50px_8px] shadow-black my-auto flex flex-col gap-4'>
           <p>Fields marked with * are required</p>
           <h1 class = 'text-3xl'>Personal Information</h1>
 <!-- names --> 
@@ -23,19 +24,19 @@ import {motion} from 'framer-motion';
             </div>
             <div class="flex flex-col flex-auto">
               <label for='lname'>Last Name*</label>
-              <input type='text' id='lname' name='Last Name' placeholder="Glizzy" required>
+              <input type='text' id='lname' name='Last Name' placeholder="Doe" required>
             </div>
           </div>
 <!-- email -->
           <div class="flex flex-col">
             <label for='email'>Email Address*</label>
-            <input type='email' id='email' name='email' placeholder="rizzler@rizzy.com" required>
+            <input type='email' id='email' name='email' placeholder="user@email.com" required>
           </div>
 <!--School name + grades -->
           <div class = "flex gap-4">
             <div class = 'flex flex-col flex-[4]'>
               <label for='schoolname'>School Name*</label>
-              <input type ='text' id = 'schoolName' name = 'schoolname' placeholder = "Rizz school" required>
+              <input type ='text' id = 'schoolName' name = 'schoolname' placeholder = "University High School" required>
             </div>
             <div class = 'flex flex-col flex-[1]'>
               <label for ='grade'>Grade*</label>
@@ -52,13 +53,13 @@ import {motion} from 'framer-motion';
 <!-- Grant Details begin -->
           <h1 class = 'text-3xl'>Grant Details</h1>
 <!-- ClubName + Amount requested -->
-          <div class = 'flex gap-4'>
-            <div class = 'flex flex-col flex-[4]'>
+          <div class = 'flex gap-4 items-center'>
+            <div class = 'flex flex-col flex-[3]'>
               <label for = 'ClubName'>Club or Program Name*</label>
               <input type="text" id="ClubName" name = "ClubName" placeholder = "What is the name of your club or program?" required>
             </div>
             <div class = 'flex flex-col flex-[1]'>
-              <label for = 'Money'>Amount Requested($)*</label>
+              <label for = 'Money'>Amount Requested ($)*</label>
               <input type = 'number' id = 'Money' name = 'Money' placeholder ="0.00" required>
             </div>
           </div>
@@ -69,29 +70,43 @@ import {motion} from 'framer-motion';
           </div>
           <div class = 'flex flex-col'>
 <!-- SUBMIT!!!! -->
-            <button type ='submit' class = "border-2 border-black p-3 rounded-md w-1/4" >Submit</button>
+            <button type ='submit' class = "bg-green-300 text-white text-xl mx-auto mt-5 shadow-2xl shadow-black p-3 rounded-3xl w-1/5 transition duration-300 ease-in-out hover:scale-105 hover:bg-green-400" >Submit</button>
           </div>
         </form>
       </div>
     </div>
   </div>
+
+
 </Frame>
+
 
 <style> 
   textarea{
     width: 100%;
-    height: 120px;
+    height: 200px;
     padding: 5px;
-    border: 2px solid black;
+    border: 2px solid gray;
     border-radius: 4px;
     resize: none;
+
+    font-weight:100;
   }
   input{
     width: 100%;
     height: 50px;
     padding: 5px;
-    border: 2px solid black;
+    border: 2px solid gray;
     border-radius: 4px;
     resize: none;
+
+    font-weight:100; 
   }
+
+  select{
+    
+    font-weight:100;
+  }
+
+
 </style>

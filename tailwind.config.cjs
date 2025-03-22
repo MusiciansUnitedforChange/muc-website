@@ -8,9 +8,7 @@ module.exports = {
         inter: ['inter'],
       },
       colors: {
-        primary: '#ff7e5f',
-        secondary: '#feb47b',
-        // Add more colors as needed
+        sombra: 'rgba(0,0,0,0.7)',
 
 
 
