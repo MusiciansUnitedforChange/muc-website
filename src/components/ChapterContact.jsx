@@ -11,7 +11,7 @@ export default function Popup(props){
     
     <>
 
-      <div className='flex flex-col items-center w-full h-1/2'>
+      <div className='flex flex-col items-center w-full h-1/2 text-center'>
 
         <h1 className='text-4xl m-10 mb-5'>Any Questions?</h1>
         <h2 className='text-2xl font-inter font-thin mt-0 m-10'>Our members would be happy to answer</h2>
@@ -25,17 +25,19 @@ export default function Popup(props){
 
         <div className='fixed z-[2000] left-0 top-0 bg-black bg-opacity-70 w-full h-full flex justify-center items-center '>
           
-          <button onClick={()=> setIsOpen(false)} className="fixed top-10 right-20 text-white"><X className='outline-none opacity-90' size={80}/></button>
 
           <motion.div 
             initial={{opacity:0, }}
             animate={{opacity:1,}}
+            exit={{opacity:0}}
             transition={{duration:0.3}}        
-            className='bg-white w-1/3 h-[750px] p-20 relative shadow-black shadow-2xl rounded-3xl'
+            className='overflow-y-scroll bg-white w-[350px] md:w-[600px] h-[500px] md:h-[700px] p-10 relative shadow-black shadow-2xl rounded-3xl'
             client:load
           >
+            <button onClick={()=> setIsOpen(false)} className="absolute top-5 right-5 md:top-8 md:right-8 text-sombra "><X className='outline-none' size={40}/></button>
+             
             <h2 className='text-2xl'>Contact Our {props.name} Chapter</h2>
-            <h3 className='text-md font-inter'>We will do out best to respond to you within x business days.</h3>
+            <h3 className='text-md font-inter'>We will do our best to respond to you within x business days.</h3>
             <form className='mt-10 flex flex-col'>
               <label htmlFor='name' className=""
               >Name</label>

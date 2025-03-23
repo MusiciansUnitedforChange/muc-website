@@ -14,7 +14,7 @@ const { title } = Astro.props;
   </head>
   <body class='flex font-lexend flex-col'>
     <Header></Header>
-    <main class='flex-1 w-full h-full overflow-x-hidden'>
+    <main class='flex-1 w-full h-full lg:overflow-x-hidden md:overflow-x-scroll sm:overflow-x-scroll'>
       <slot/>
     </main>  
   </body>
