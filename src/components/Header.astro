@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import Nav from './Nav.astro';
 
+import {FileUser, HandCoins} from 'lucide-react';
+
 import { motion } from 'framer-motion';
 ---
 <div class='absolute w-full h-auto'>
@@ -10,13 +12,47 @@ import { motion } from 'framer-motion';
 
     <div class='absolute w-1/3 h-full right-0 flex ml-auto w-1/5 justify-center gap-5'>
       <motion.a 
-        initial={{backgroundColor:'white', color:'#7bf1a8'}}
-        whileHover={{backgroundColor:'#7bf1a8', color:'white'}}
+        initial={{scale:1, backgroundColor:'#7bf1a8', color:'white', opacity:0, y:-10}}
+        animate={{opacity:1, y:0, transition:{delay:1, duration:0.3}}}
+        transition={{duration:0.3}}
 
-        href='/apply' className='w-1/3 border-solid border-2 border-green-500 rounded-3xl text-green-500 flex justify-center items-center'
+        whileHover={{scale:0.97, backgroundColor:'#50c982'}}
+        whileTap={{scale:0.93}}
+
+        href='/apply' 
+
+        className='w-1/3 h-2/3 my-auto border-solid shadow-sombra shadow-2xl rounded-[200px] text-green-500 flex justify-center items-center'
         client:load
-      >Apply</motion.a>
-      <a class='w-1/3 border-solid border-2 rounded-3xl border-2 border-black rounded-3xl flex justify-center items-center '>Donate</a>
+      >
+        <div class='flex gap-1 items-center'>
+          <FileUser size={30}/>
+          <h1>Apply</h1>
+        </div>
+      
+
+      </motion.a>
+
+      <motion.a 
+        initial={{scale:1, backgroundColor:'#3d4240', color:'white', opacity:0, y:-10}}
+        animate={{opacity:1, y:0, transition:{delay:1.25, duration:0.3}}}
+        transition={{duration:0.3}}
+
+        whileHover={{scale:0.97, backgroundColor:'#232725'}}
+        whileTap={{scale:0.93}}
+
+        href='/apply' 
+
+        className='w-1/3 h-2/3 my-auto border-solid shadow-sombra shadow-2xl rounded-[200px] text-green-500 flex justify-center items-center'
+        client:load
+      >
+        <div class='flex gap-1 items-center'>
+          <HandCoins size={30}/>
+          <h1>Donate</h1>
+        </div>
+      
+
+      </motion.a>
+
 
     </div>
   </header>
