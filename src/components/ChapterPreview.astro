@@ -8,22 +8,22 @@ const  {name, location, image, page  }= Astro.props;
 
 ---
 
-<a href={page} class='inline-block flex justify-center w-1/4'>
+<a href={page} class='flex justify-center min-w-[400px] min-h-[480px]  '>
   <motion.div 
     initial={{opacity:0, scale:.95}} 
     animate={{opacity:1, scale:1}}
     whileHover={{scale:1.05}}
     transition={{duration:0.3, ease:'easeInOut'}} 
 
-    className=`w-[500px] aspect-[6/5] flex flex-col-reverse shadow-[rgba(0,0,0,0.8)] shadow-2xl  text-center m-10 rounded-3xl`
+    className=`w-[300px] h-[360px] flex flex-col-reverse shadow-[rgba(0,0,0,0.8)] shadow-2xl  text-center m-10 rounded-3xl`
     client:load>
     <div class='relative w-full h-1/2 flex flex-col justify-center bg-[#EEE] rounded-b-3xl border-t-8 border-t-green-300'>
       <h1 class='text-3xl'>{name}</h1>
-      <h2 class='text-2xl'>{location}</h2>
+      <h2 class='text-xl font-inter'>{location}</h2>
     </div>
     <div class='w-full h-full flex flex-col bg-white justify-start items-center rounded-t-3xl'>
       <img src={image} class=`mt-10 w-[100px] h-[100px] rounded-[100%] ring-[5px] ring-green-300 ring-offset-white ring-offset-[5px]` />
-      <h2 class='mt-10 text-2xl'>A chapter with hella goons</h2>
+      <h2 class='mt-10 text-xl font-inter'>A chapter with hella goons</h2>
 
     </div>
   </motion.div>

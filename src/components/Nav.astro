@@ -10,9 +10,9 @@ const {pathname} =Astro.url;
 ---
 
 
-<nav class='w-1/2 overflow-y-hidden'>
+<nav class=' min-w-[100px] w-3/4 overflow-y-hidden'>
 <h1></h1>
-  <ul class='flex p-5 text-2xl gap-10 justify-center w-full h-auto list-none'>
+  <ul class='flex text-2xl gap-5 md:gap-10 lg:gap-20 justify-start md:justify-center items-center  w-full h-full list-none'>
     <motion.li
       initial={{opacity:0, y:-10}}
       animate={{opacity:1, y:0}}
@@ -33,17 +33,18 @@ const {pathname} =Astro.url;
 
       transition={{duration:.75, type:'spring', bounce:0}}
 
-      className=`border-b-4 ${pathname === '/' ? 'border-b-green-300' : 'border-b-sombra'}`
+      className=`min-w-[50px] sm:w-[55px] md:w-[65px] lg:w-[75px] aspect-square border-b-4 ${pathname === '/' ? 'border-b-green-300' : 'border-b-sombra'}`
       client:load
     ><a href='/'>
 
-        <div class='flex flex-col items-center'>
-          <House size={30}/>
-          <h2>Home</h2>
+        <div class='w-full h-full flex flex-col items-center justify-around '>
+          <House size={36} />
+          <h2 class=' hidden md:block text-xl lg:text-2xl'>Home</h2>
         </div>
-
-    </a></motion.li>
+      </a>
     
+    </motion.li>
+
     <motion.li
       initial={{opacity:0, y:-10}}
       animate={{opacity:1, y:0}}
@@ -64,17 +65,19 @@ const {pathname} =Astro.url;
 
       transition={{delay:.25, duration:.75, type:'spring', bounce:0}}
 
-      className=`border-b-4 ${pathname === '/chapters' ? 'border-b-green-300' : 'border-b-sombra'}`
+      className=`min-w-[50px] sm:w-[55px] md:w-[65px] lg:w-[75px] aspect-square border-b-4 ${pathname === '/chapters' ? 'border-b-green-300' : 'border-b-sombra'}`
       client:load
     ><a href='/chapters'>
 
-        <div class='flex flex-col items-center'>
-          <Users size={30}/>
-          <h2>Chapters</h2>
+        <div class='w-full h-full flex flex-col items-center justify-around '>
+          <Users size={36} />
+          <h2 class=' hidden md:block text-xl lg:text-2xl'>Chapters</h2>
         </div>
-
-    </a></motion.li>
+      </a>
     
+    </motion.li> 
+ 
+
     <motion.li
       initial={{opacity:0, y:-10}}
       animate={{opacity:1, y:0}}
@@ -95,20 +98,19 @@ const {pathname} =Astro.url;
 
       transition={{delay:.5, duration:.75, type:'spring', bounce:0}}
 
-      className=`border-b-4 ${pathname === '/contact' ? 'border-b-green-300' : 'border-b-sombra'}`
+      className=`min w-[50px] sm:w-[55px] md:w-[65px] lg:w-[75px] aspect-square border-b-4 ${pathname === '/contact' ? 'border-b-green-300' : 'border-b-sombra'}`
       client:load
     ><a href='/'>
 
-        <div class='flex flex-col items-center'>
-          <Send size={30}/>
-          <h2>Contact</h2>
+        <div class='w-full h-full flex flex-col items-center justify-around '>
+          <Send size={36} />
+          <h2 class=' hidden md:block text-xl lg:text-2xl'>Contact</h2>
         </div>
-
-    </a></motion.li>
+      </a>
     
-    
-   
-      
+    </motion.li> 
+ 
+        
   </ul>
 </nav>
 
