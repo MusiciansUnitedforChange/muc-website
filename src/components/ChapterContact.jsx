@@ -17,7 +17,7 @@ export default function Popup(props){
         <h2 className='text-2xl font-inter font-thin mt-0 m-10'>Our members would be happy to answer</h2>
 
         <button onClick={ ()=> setIsOpen(true)}
-              className="w-[200px] h-[100px] bg-green-300 rounded-3xl shadow-2xl shadow-sombra text-white text-2xl transition duration-300 ease-in-out hover:bg-green-400 hover:scale-105"
+              className="w-[200px] h-[100px] bg-green-300 rounded-3xl text-white text-2xl transition duration-300 ease-in-out hover:bg-green-400 hover:scale-105"
         >Reach Out</button>
       </div>
 
@@ -37,21 +37,21 @@ export default function Popup(props){
             <button onClick={()=> setIsOpen(false)} className="absolute top-5 right-5 md:top-8 md:right-8 text-sombra "><X className='outline-none' size={40}/></button>
              
             <h2 className='text-2xl'>Contact Our {props.name} Chapter</h2>
-            <h3 className='text-md font-inter'>We will do our best to respond to you within x business days.</h3>
+            <h3 className='text-md font-inter'>We will do our best to respond to you within 1-5 business days.</h3>
             <form className='mt-10 flex flex-col'>
               <label htmlFor='name' className=""
               >Name</label>
-              <input className="font-inter w-full border-b-2 h-10 border-b-black outline-none mb-5 " id='name' type='text' required/>
+              <input className="font-inter w-full border-b-2 h-10 border-b-black outline-none mb-5 focus:border-b-green-300 " id='name' type='text' required/>
 
               <label htmlFor='email' className=""
               >Email</label>
-              <input className="font-inter w-full border-b-2 h-10 border-b-black outline-none mb-5" id='email' type='email' required/>
+              <input className="font-inter w-full border-b-2 h-10 border-b-black outline-none mb-5 focus:border-b-green-300" id='email' type='email' required/>
 
               <label htmlFor='message' className=""
               >How can we help?</label>
-              <textarea className="font-inter w-full h-[250px] border-b-2 border-b-black outline-none mb-5" id='message' required></textarea>
+              <textarea className="font-inter w-full h-[250px] border-b-2 border-b-black outline-none mb-5 focus:border-b-green-300" id='message' required></textarea>
 
-              <button className='w-[150px] h-[50px] bg-green-300 text-white shadow-2xl shadow-sombra rounded-3xl mx-auto transition duration-300 ease-in-out hover:bg-green-400 hover:scale-105'>Submit</button>
+              <button className='w-full h-[50px] bg-green-300 text-white rounded-3xl mx-auto transition duration-300 ease-in-out hover:bg-green-400 hover:scale-[102%]'>Submit</button>
 
             </form>
 

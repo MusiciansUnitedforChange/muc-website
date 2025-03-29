@@ -11,8 +11,7 @@ const {pathname} =Astro.url;
 
 
 <nav class=' min-w-[100px] w-3/4 overflow-y-hidden'>
-<h1></h1>
-  <ul class='flex text-2xl gap-5 md:gap-10 lg:gap-20 justify-start md:justify-center items-center  w-full h-full list-none'>
+  <ul class='flex font-inter text-2xl gap-5 md:gap-10 lg:gap-20 justify-start md:justify-center items-center  w-full h-full list-none'>
     <motion.li
       initial={{opacity:0, y:-10}}
       animate={{opacity:1, y:0}}
@@ -31,9 +30,9 @@ const {pathname} =Astro.url;
       }}
 
 
-      transition={{duration:.75, type:'spring', bounce:0}}
+      transition={{duration:.3, type:'spring', bounce:0}}
 
-      className=`min-w-[50px] sm:w-[55px] md:w-[65px] lg:w-[75px] aspect-square border-b-4 ${pathname === '/' ? 'border-b-green-300' : 'border-b-sombra'}`
+      className=`min-w-[50px] sm:w-[55px] md:w-[65px] lg:w-[75px] aspect-square border-b-4 ${pathname === '/' ? 'border-b-green-300 font-bold' : 'border-b-sombra'}`
       client:load
     ><a href='/'>
 
@@ -47,7 +46,7 @@ const {pathname} =Astro.url;
 
     <motion.li
       initial={{opacity:0, y:-10}}
-      animate={{opacity:1, y:0}}
+      animate={{opacity:1, y:0, transition:{delay:0.25, duration:0.3}}}
 
       whileHover={{
         color: "#86efac",
@@ -63,9 +62,9 @@ const {pathname} =Astro.url;
       }}
 
 
-      transition={{delay:.25, duration:.75, type:'spring', bounce:0}}
+      transition={{ duration:.5, type:'spring', bounce:0}}
 
-      className=`min-w-[50px] sm:w-[55px] md:w-[65px] lg:w-[75px] aspect-square border-b-4 ${pathname === '/chapters' ? 'border-b-green-300' : 'border-b-sombra'}`
+      className=`min-w-[50px] sm:w-[55px] md:w-[65px] lg:w-[75px] aspect-square border-b-4 ${pathname === '/chapters' ? 'border-b-green-300 font-bold' : 'border-b-sombra'}`
       client:load
     ><a href='/chapters'>
 
@@ -80,7 +79,7 @@ const {pathname} =Astro.url;
 
     <motion.li
       initial={{opacity:0, y:-10}}
-      animate={{opacity:1, y:0}}
+      animate={{opacity:1, y:0, transition:{delay:0.5, duration:.3}}}
 
       whileHover={{
         color: "#86efac",
@@ -96,11 +95,11 @@ const {pathname} =Astro.url;
       }}
 
 
-      transition={{delay:.5, duration:.75, type:'spring', bounce:0}}
+      transition={{ duration:.75, type:'spring', bounce:0}}
 
-      className=`min w-[50px] sm:w-[55px] md:w-[65px] lg:w-[75px] aspect-square border-b-4 ${pathname === '/contact' ? 'border-b-green-300' : 'border-b-sombra'}`
+      className=`min w-[50px] sm:w-[55px] md:w-[65px] lg:w-[75px] aspect-square border-b-4 ${pathname === '/contact' ? 'border-b-green-300 font-bold' : 'border-b-sombra'}`
       client:load
-    ><a href='/'>
+    ><a href='/contact'>
 
         <div class='w-full h-full flex flex-col items-center justify-around '>
           <Send size={36} />

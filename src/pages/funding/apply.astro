@@ -16,7 +16,7 @@ import {motion} from 'framer-motion';
         </div>
 
     <!--Form begins-->
-        <form action="https://formsubmit.co/johndendrick0@gmail.com" method="POST" class='mx-auto mb-[200px] lg:mb-10 lg:mr-5  w-[400px] md:w-[700px] lg:w-[700px] h-auto overflow-y-scroll overflow-x-hidden bg-white font-inter font-bold p-10 mt-[100px] lg:mt-20 rounded-3xl shadow-[0_50px_50px_8px] shadow-sombra flex flex-col gap-4 '>
+        <form action="https://formsubmit.co/johndendrick0@gmail.com" method="POST" class='mx-auto mb-[200px] lg:mb-10 lg:mr-5 xl:mr-20 w-[400px] md:w-[700px] lg:w-[800px] h-auto overflow-y-scroll overflow-x-hidden bg-white font-inter font-bold p-10 mt-[100px] lg:mt-20 rounded-3xl shadow-[0_50px_50px_8px] shadow-sombra flex flex-col gap-4 '>
           <p>Fields marked with * are required</p>
           <h1 class = 'text-3xl'>Personal Information</h1>
 <!-- names --> 
@@ -73,7 +73,7 @@ import {motion} from 'framer-motion';
           </div>
           <div class = 'flex flex-col'>
 <!-- SUBMIT!!!! -->
-            <button type ='submit' class = "bg-green-300 text-white text-xl mx-auto mt-5 shadow-2xl shadow-black p-3 rounded-3xl w-[125px] md:w-[150px] transition duration-300 ease-in-out hover:scale-105 hover:bg-green-400" >Submit</button>
+            <button type ='submit' class = "bg-green-300 text-white text-xl mx-auto mt-5 p-3 rounded-3xl w-full transition duration-300 ease-in-out hover:scale-[102%] hover:bg-green-400" >Submit</button>
           </div>
         </form>
       </div>
@@ -104,6 +104,11 @@ import {motion} from 'framer-motion';
     resize: none;
 
     font-weight:100; 
+  }
+
+  input:focus, textarea:focus, select:focus{
+    outline-color:lime;
+
   }
 
   select{
