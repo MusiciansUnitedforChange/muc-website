@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+
+import { Card, CardHeader, CardFooter, CardContent } from './ui/card.tsx';
+
+const {title, subtitle, date, description} = Astro.props;
+---
+
+
+<Card className='min-w-[350px] w-[350px] sm:w-[500px] min-h-[350px] '>
+  <CardHeader >
+    <h3 class='font-inter text-xl mb-4'>{date}</h3>
+    <div class='flex gap-5 '>
+      <div class='my-auto w-[10px] h-[10px] rounded-full bg-green-500'></div>
+      <h1 class='text-3xl'>{title}</h1>
+    </div>
+    <h3 class='font-inter'>{subtitle}</h3>
+
+
+  </CardHeader>
+
+  <CardContent>
+    <h3 class='font-inter text-2xl'>
+      
+      {description}
+
+    </h3>
+    
+  </CardContent>
+
+</Card>
+
+

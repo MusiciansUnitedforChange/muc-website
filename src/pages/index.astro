@@ -2,9 +2,10 @@
 import '../styles/global.css';
 
 import Frame from '../layouts/FRAME.astro';
-import ImageSlider from '../components/ImageSlider/ImageSlider.astro';
+import {Marquee} from '../components/magicui/marquee.tsx';
 import {motion} from 'framer-motion';
 
+import ImpactCard from '../components/ImpactCard.astro';
 ---
 
 <Frame>
@@ -42,16 +43,23 @@ import {motion} from 'framer-motion';
 
     </div>  
 
-
-
-   <!--Impact Stories carousel -->
-  </div>
-  <div class='w-full h-full bg-white flex flex-col items-center'>
-    <h1 class='text-6xl mb-5 '>Our Impact</h1>
-    <h2 class='text-3xl '>Learn about how we fund shi</h2>
-    <ImageSlider></ImageSlider>
   </div>
 
+  <!--Impact marquee-->
 
+  <div class='w-full h-auto py-10 '>
+    <Marquee reverse className='[--duration:80s] sm:[--duration:100s] '>
+
+      <ImpactCard title='Our impact @ ...' subtitle='A *brief* summary' date='01/01/1970' description='Our funding endeavors proved to have a positive impact here.'/> 
+      <ImpactCard title='Our impact @ ...' subtitle='A *brief* summary' date='01/01/1970' description='Our funding endeavors proved to have a positive impact here.'/> 
+      <ImpactCard title='Our impact @ ...' subtitle='A *brief* summary' date='01/01/1970' description='Our funding endeavors proved to have a positive impact here.'/> 
+      <ImpactCard title='Our impact @ ...' subtitle='A *brief* summary' date='01/01/1970' description='Our funding endeavors proved to have a positive impact here.'/> 
+      <ImpactCard title='Our impact @ ...' subtitle='A *brief* summary' date='01/01/1970' description='Our funding endeavors proved to have a positive impact here.'/> 
+      <ImpactCard title='Our impact @ ...' subtitle='A *brief* summary' date='01/01/1970' description='Our funding endeavors proved to have a positive impact here.'/> 
+
+
+    </Marquee>
+  </div>
+  
  
 </Frame>
