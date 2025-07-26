@@ -1,15 +1,52 @@
 ---
 import '../styles/global.css'; 
 
-import { Marquee } from '../components/magicui/marquee.tsx'
-import { Card } from '../components/ui/card.tsx'
+import Frame from '../layouts/frame.astro'
+import { BentoCard, BentoGrid } from '../components/magicui/bento-grid.tsx'
+
+import { Piano, List } from 'lucide-react'
 ---
 
-<html>
-    <body>
-        <h1 class=>hello world</h1>
-        <Card>
-            <h2>Card</h2>
-        </Card>
-    </body>
-</html>
+
+<Frame>
+   
+    <!-- Hero Section -->
+    <div id="hero" class="p-8 w-full">
+        
+        <h1 class="text-xl font-bold w-3/4">Musicians United for Change</h1>
+        <h2 class="text-lg p-4 ">Kids changing communities with music.</h2>
+    
+    </div>
+
+    <!-- Bento Nav section -->
+     <div id="nav">
+
+        <BentoGrid className='p-8'>
+            <!--About -->
+            <BentoCard 
+                name="About Us"
+                className="col-span-2 h-2/3"
+                background = '/images/filler.png'
+                Icon={ Piano }
+                description="Our goals for MUC"
+                href="/"
+                cta="View page"
+                />
+            <!--Programs -->
+            <BentoCard 
+                name="Programs"
+                className="col-span-2 col-start-2 h-2/3"
+                background = '/images/filler.png'
+                Icon={ List }
+                description="How we engage our community"
+                href="/"
+                cta="See our programs"
+                />
+        </BentoGrid>
+
+
+     </div>
+
+
+    
+</Frame>
