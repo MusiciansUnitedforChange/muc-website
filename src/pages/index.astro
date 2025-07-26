@@ -1,65 +1,15 @@
 ---
-import '../styles/global.css';
+import '../styles/global.css'; 
 
-import Frame from '../layouts/FRAME.astro';
-import {Marquee} from '../components/magicui/marquee.tsx';
-import {motion} from 'framer-motion';
-
-import ImpactCard from '../components/ImpactCard.astro';
+import { Marquee } from '../components/magicui/marquee.tsx'
+import { Card } from '../components/ui/card.tsx'
 ---
 
-<Frame>
-  <!--title image-->
-  <div class=' my-10 w-full flex items-center justify-center h-screen'>
-    <div class='mx-auto aspect-square min-w-[350px] sm:w-[450px] md:w-[550px] lg:w-[850px] blob flex flex-col justify-center items-center'>
-      <h1 class='bg-white w-auto text-center border-green-300 border-b-4 md:border-b-[6px] lg:border-b-8 text-[38px] sm:text-5xl md:text-6xl lg:text-8xl md:p-2'>Fund The Future</h1>
-      <h2 class='text-center font-inter font-thin text-lg md:text-2xl lg:text-3xl p-1 md:p-3 italic'>Because it won't fund itself</h2>
-   
-    </div>
-
-  </div>
-  <!--About us-->
-
-  <div class=' dots flex p-5 md:p-10 flex-col overflow-x-hidden lg:flex-row items-center lg:items-start lg:justify-between w-full h-full'>
-    <div class=' w-full lg:w-1/2 h-full text-center lg:text-left'>
-      <h1 class='w-auto p-5 text-5xl md:text-6xl bg-white border-b-8 border-b-green-300'> About Us:</h1>
-      <h2 class='mt-10 p-5 text-xl md:text-2xl bg-white font-inter'>Fund the Future is a certified 501c3 non-profit organization founded in Colorado when the issue of club funding arose... </h2>
-    </div> 
-  <!--Image collage-->
-
-    <div class='p-10 px-20 w-[500px] md:w-[700px] lg:w-[800px] h-full flex flex-col'>
-      <div class='flex justify-center lg:justify-start'>
-        <img class='blur-sm' src='../public/icons/schools/Cherry_Creek_HS_logo.png'/>
-      </div>
-
-      <div class='flex justify-center'>
-        <img class='blur-sm' src='../public/icons/schools/Cherry_Creek_HS_logo.png'/>
-      </div>
-
-      <div class='flex justify-center lg:justify-start'>
-        <img class='blur-sm' src='../public/icons/schools/Cherry_Creek_HS_logo.png'/>
-      </div>
-  
-
-    </div>  
-
-  </div>
-
-  <!--Impact marquee-->
-
-  <div class='w-full h-auto py-10 '>
-    <Marquee reverse className='[--duration:80s] sm:[--duration:100s] '>
-
-      <ImpactCard title='Our impact @ ...' subtitle='A *brief* summary' date='01/01/1970' description='Our funding endeavors proved to have a positive impact here.'/> 
-      <ImpactCard title='Our impact @ ...' subtitle='A *brief* summary' date='01/01/1970' description='Our funding endeavors proved to have a positive impact here.'/> 
-      <ImpactCard title='Our impact @ ...' subtitle='A *brief* summary' date='01/01/1970' description='Our funding endeavors proved to have a positive impact here.'/> 
-      <ImpactCard title='Our impact @ ...' subtitle='A *brief* summary' date='01/01/1970' description='Our funding endeavors proved to have a positive impact here.'/> 
-      <ImpactCard title='Our impact @ ...' subtitle='A *brief* summary' date='01/01/1970' description='Our funding endeavors proved to have a positive impact here.'/> 
-      <ImpactCard title='Our impact @ ...' subtitle='A *brief* summary' date='01/01/1970' description='Our funding endeavors proved to have a positive impact here.'/> 
-
-
-    </Marquee>
-  </div>
-  
- 
-</Frame>
+<html>
+    <body>
+        <h1 class=>hello world</h1>
+        <Card>
+            <h2>Card</h2>
+        </Card>
+    </body>
+</html>
