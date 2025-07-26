@@ -10,8 +10,7 @@ const  {name, location, image, page  }= Astro.props;
 
 <a href={page} class='flex justify-center min-w-[400px] min-h-[480px]  '>
   <motion.div 
-    initial={{opacity:0, scale:.95}} 
-    whileInView={{opacity:1, scale:1}}
+    initial={{opacity:0, scale:.95}}     whileInView={{opacity:1, scale:1}}
     whileHover={{scale:1.05}}
     transition={{duration:0.3, ease:'easeInOut'}} 
 
