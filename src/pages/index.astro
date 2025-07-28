@@ -25,23 +25,34 @@ import { Piano, List } from 'lucide-react'
             <!--About -->
             <BentoCard 
                 name="About Us"
-                className="col-span-2 h-2/3"
-                background = '/images/filler.png'
+                className="col-start-1 col-span-2 h-[256px]"
+                bgImage='/images/filler.png'
                 Icon={ Piano }
                 description="Our goals for MUC"
                 href="/"
                 cta="View page"
                 />
+            
+            <div class="col-start-3 col-span-1 h-[256px]">
+                <div class="h-full bg-neutral-300"></div>    
+            </div>
+
             <!--Programs -->
             <BentoCard 
                 name="Programs"
-                className="col-span-2 col-start-2 h-2/3"
-                background = '/images/filler.png'
+                className="row-start-2 col-start-2 col-span-2 h-[256px]"
+                bgImage='/images/filler.png'
                 Icon={ List }
-                description="How we engage our community"
+                description="How we engage"
                 href="/"
                 cta="See our programs"
                 />
+         
+
+            <div class="row-start-2 col-start-1 col-span-1 h-[256px]">
+                <div class="h-full bg-neutral-300"></div>    
+            </div>
+
         </BentoGrid>
 
 
