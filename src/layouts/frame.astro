@@ -17,7 +17,7 @@ const { title, icon } = Astro.params;
     <main class=''>
       <slot/>
     </main> 
-    <FloatingNavigation/>
+    <FloatingNavigation client:load/>
     <Footer/>
   </body>
 </html>

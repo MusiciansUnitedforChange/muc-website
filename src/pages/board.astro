@@ -1,0 +1,29 @@
+---
+import '../styles/global.css';
+
+import Frame from '../layouts/frame.astro';
+
+import Members from '../components/members.tsx'
+---
+
+<Frame>
+
+    <!--Header -->
+    <div class="w-full h-[256px] flex flex-col items-center justify-center gap-y-8 py-8">
+
+        <h1 class='w-3/4 text-[1.8rem] font-bold text-center'>Meet the talented team who make all this happen</h1>
+        <p class="text-right text-sm text-neutral-800"> some subtext here maybe.....</p>
+
+
+    </div>
+
+    <div class="w-full flex justify-center">
+        <Members client:load/>
+
+    </div>
+    
+
+
+</Frame>
+
+

@@ -4,7 +4,7 @@ import '../styles/global.css';
 import Frame from '../layouts/frame.astro'
 import { BentoCard, BentoGrid } from '../components/magicui/bento-grid.tsx'
 
-import { Piano, List, Calendar } from 'lucide-react'
+import { Piano, List, Calendar, Users } from 'lucide-react'
 
 
 ---
@@ -27,7 +27,7 @@ import { Piano, List, Calendar } from 'lucide-react'
             <!--About -->
             <BentoCard 
                 name="About Us"
-                className="col-start-1 col-span-2 h-[256px]"
+                className="col-start-1 col-span-3 h-[256px]"
                 bgImage='/images/filler.png'
                 Icon={ Piano }
                 description="Our goals for MUC"
@@ -35,14 +35,11 @@ import { Piano, List, Calendar } from 'lucide-react'
                 cta="View page"
                 />
             
-            <div class="col-start-3 col-span-1 h-[256px]">
-                <div class="h-full bg-neutral-300"></div>    
-            </div>
 
             <!--Programs -->
             <BentoCard 
                 name="Programs"
-                className="row-start-2 col-start-2 col-span-2 h-[256px]"
+                className="row-start-2 col-start-1 col-span-2 h-[256px]"
                 bgImage='/images/filler.png'
                 Icon={ List }
                 description="How we engage"
@@ -51,7 +48,23 @@ import { Piano, List, Calendar } from 'lucide-react'
                 />
          
 
-            <div class="row-start-2 col-start-1 col-span-1 h-[256px]">
+            <div class="row-start-2 col-start-3 col-span-1 h-[256px]">
+                <div class="h-full bg-neutral-300"></div>    
+            </div>
+
+            <!--Our Team -->
+            <BentoCard 
+                name="Our Team"
+                className="row-start-3 col-start-2 col-span-2 h-[256px]"
+                bgImage='/images/filler.png'
+                Icon={ Users }
+                description="..."
+                href="/board"
+                cta="Who makes MUC run?"
+                />
+         
+
+            <div class="row-start-3 col-start-1 col-span-1 h-[256px]">
                 <div class="h-full bg-neutral-300"></div>    
             </div>
 

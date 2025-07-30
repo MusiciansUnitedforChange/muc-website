@@ -16,11 +16,20 @@ import { Calendar } from 'lucide-react';
 const CalendarDialog : React.FC = () =>{
 
     return (
-        <>
-            <button onClick={() => console.log('clicked')} className='z-[9999] bg-red-500'>Hello </button>
-
-            <script>console.log('loaded');</script>
-        </>
+        
+        <Dialog >
+            <DialogTrigger><Calendar/></DialogTrigger>
+            <DialogContent className='w-full x-overflow-hidden'>
+                <DialogHeader>
+                <DialogTitle>Upcoming Events</DialogTitle>
+                <DialogDescription>
+                    
+                </DialogDescription>
+                </DialogHeader>
+                
+                <iframe className='w-full h-[360px] ring-4 ring-[#f0f4f9] ring-offset-2 rounded-3xl' src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FDenver"/>
+            </DialogContent>
+        </Dialog>
 
 
     );

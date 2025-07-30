@@ -3,6 +3,8 @@ import '../styles/global.css';
 
 import Frame from '../layouts/frame.astro';
 
+import { ConcertsPie } from '../components/ui/pie-chart'
+
 ---
 
 <Frame>
@@ -28,6 +30,12 @@ import Frame from '../layouts/frame.astro';
 
             <p>During COVID, MUC organized two virtual benefit concerts for the Food Bank of the Rockies.</p>
 
+            <!--Stats -->
+            <div class="flex flex-row justify-end">
+                <ConcertsPie className='bg-neutral-200 w-4/5 shadow-none' client:load/>
+                
+            </div>
+
         </div>
         
     </div>
@@ -38,7 +46,7 @@ import Frame from '../layouts/frame.astro';
         
         <div class="p-4">
             <p>Our education program provides opportunities for high school musicians to share their love of music while giving back.</p>
-
+            
         </div>
     </div>
 
