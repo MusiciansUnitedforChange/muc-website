@@ -10,21 +10,21 @@ import { ConcertsPie } from '../components/ui/pie-chart'
 <Frame>
 
     <!--Header -->
-    <div class="bg-[url(/images/filler.png)] text-white p-2 pb-12 w-full h-[24rem] flex flex-col items-center justify-end">
+    <div class="bg-transparent p-2 pb-12 w-full h-[24rem] text-center flex flex-col items-center justify-end">
         
-        <div class="flex flex-row justify-between items-center">
+        <div class="flex flex-row justify-center items-center w-[480px]">
             
-            <h2 class='p-2 text-[1.8rem] w-1/2'>How we engage our community</h2>
+            <h2 class='p-2 text-neutral-800 text-[1.8rem] w-1/2'>How we engage our community</h2>
 
         </div>
         
-        <h1 class="text-[2.8rem] font-bold ">Our Programs</h1>
+        <h1 class="text-[2.8rem] text-neutral-900 font-bold ">Our Programs</h1>
 
 
     </div>
 
     <!--Concerts -->
-    <div class="w-full text-left mt-[-24px] bg-neutral-200 p-8 rounded-t-3xl">
+    <div class="w-full text-left mt-[-24px] bg-white/20 p-8 rounded-t-3xl">
         <h1 class='text-xl font-bold'>Concerts</h1>
         <div class="p-4">
 
@@ -32,7 +32,7 @@ import { ConcertsPie } from '../components/ui/pie-chart'
 
             <!--Stats -->
             <div class="flex flex-row justify-end">
-                <ConcertsPie className='bg-neutral-200 w-4/5 shadow-none' client:load/>
+                <ConcertsPie className='bg-transparent w-4/5 border-none shadow-none' client:load/>
                 
             </div>
 
@@ -41,7 +41,7 @@ import { ConcertsPie } from '../components/ui/pie-chart'
     </div>
 
     <!--Education -->
-    <div class="w-full text-right mt-[-24px] bg-neutral-300 p-8 rounded-t-3xl">
+    <div class="w-full text-right mt-[-24px] bg-white/20 p-8 rounded-t-3xl">
         <h1 class='text-xl font-bold'>Education</h1>
         
         <div class="p-4">

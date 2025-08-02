@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
 
     return (
 
-        <div className='w-full h-auto min-h-[128px]  flex flex-col gap-y-8 bg-gray-200 p-8'>
+        <div className='w-full h-auto min-h-[128px] bg-gradient-to-t from-white from-30% to-transparent backdrop-blur-lg flex flex-col gap-y-8 p-8 pt-16'>
             
             <div className='w-full h-4/5 flex flex-row gap-x-12 '>
 

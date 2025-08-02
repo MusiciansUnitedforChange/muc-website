@@ -2,6 +2,7 @@
 import '../styles/global.css';
 
 import Footer from '../components/footer.tsx';
+import Header from '../components/header.tsx';
 import FloatingNavigation from '../components/nav.tsx';
 
 const { title, icon } = Astro.params;
@@ -13,11 +14,17 @@ const { title, icon } = Astro.params;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{ title }</title>
   </head>
-  <body class='w-full h-full bg-white'>
-    <main class=''>
-      <slot/>
-    </main> 
+  <body class='w-full h-full bg-[url(/images/bg.png)] bg-cover  '>
+    <div class="backdrop-blur-xl">
+
+      <Header/>
+      <main class=''>
+        <slot/>
+      </main> 
+    </div>
+
     <FloatingNavigation client:load/>
-    <Footer/>
+    <Footer client:load/>
+
   </body>
 </html>

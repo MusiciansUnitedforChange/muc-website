@@ -19,7 +19,7 @@ const Members: React.FC = () =>{
         <Accordion
             type="single"
             collapsible
-            className="w-full bg-neutral-200 overflow-visible"
+            className="no-underline w-full bg-gradient-to-t from-white/20 from-0% via-white/50 via-50% to-white/20 to-100% overflow-visible"
             
         >
 

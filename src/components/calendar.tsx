@@ -19,7 +19,7 @@ const CalendarDialog : React.FC = () =>{
         
         <Dialog >
             <DialogTrigger><Calendar/></DialogTrigger>
-            <DialogContent className='w-full x-overflow-hidden'>
+            <DialogContent className='w-full x-overflow-hidden border-non bg-white/85 rounded-2xl'>
                 <DialogHeader>
                 <DialogTitle>Upcoming Events</DialogTitle>
                 <DialogDescription>
