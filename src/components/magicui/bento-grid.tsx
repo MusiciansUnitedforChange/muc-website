@@ -3,13 +3,15 @@ import type { ComponentPropsWithoutRef, ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { motion, type HTMLMotionProps } from "framer-motion";
 
-interface BentoGridProps extends ComponentPropsWithoutRef<"div"> {
+
+interface BentoGridProps extends ComponentPropsWithoutRef<'div'> {
   children: ReactNode;
   className?: string;
 }
 
-interface BentoCardProps extends ComponentPropsWithoutRef<"div"> {
+interface BentoCardProps extends ComponentPropsWithoutRef<'div'> {
   name: string;
   className: string;
   bgImage:string;
@@ -44,6 +46,7 @@ const BentoCard = ({
   ...props
 }: BentoCardProps) => (
   <div
+
     key={name}
     className={cn(
       "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl",
@@ -51,6 +54,7 @@ const BentoCard = ({
       className,
     )}
     {...props}
+
   >
     <div className='h-full min-h-[96px] bg-gradient-to-t from-white to-transparent'></div>
     <div className="p-4 bg-white">

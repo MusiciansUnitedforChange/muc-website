@@ -6,12 +6,22 @@ import { Marquee } from '../components/magicui/marquee.tsx';
 
 import { ArrowRight } from 'lucide-react';
 
+import { motion } from 'framer-motion';
+
 ---
 
 <Frame>
 
     <!--Header -->
-    <div class="bg-transparent overflow-x-hidden p-2 pb-12 w-full h-[24rem] text-center flex flex-col items-center justify-end">
+    <motion.div 
+        initial={{opacity:0, y:-30}}
+        animate={{opacity:1, y:0}}
+        transition={{duration:1.5, type:'spring'}}
+        client:load
+        className="bg-transparent overflow-x-hidden p-2 pb-12 w-full h-[24rem] text-center flex flex-col items-center justify-end"
+        
+
+        >
         
         <div class="flex flex-row w-[480px] justify-center items-center">
             
@@ -22,26 +32,44 @@ import { ArrowRight } from 'lucide-react';
         <h1 class="text-[4rem] text-neutral-900 font-bold ">About Us</h1>
 
 
-    </div>
+    </motion.div>
 
     <!--About -->
 
-    <div class="relative w-full p-8 bg-transparent mt-[-24px] flex flex-row justify-between">
+    <motion.div
+        initial={{opacity:0}}
+        animate={{opacity:1}}
+        transition={{duration:1.5, type:'spring'}}
+        client:load
+        className="relative w-full p-8 bg-transparent mt-[-24px] flex flex-row justify-between">
 
-        <div class="z-10 sticky self-start top-0 flex flex-col items-center p-2 w-1/5 ">
-            <h1 class="text-xl font-bold"> Our Story</h1>
+        <motion.div 
+            initial={{x:-20}}
+            whileInView={{x:0}}
+            transition={{duration:1.5, type:'spring'}}
+            client:load
+
+            className="z-10 sticky self-start top-0 flex flex-col items-center p-2 w-1/5 ">
+            <h1 
+                
+                class="text-xl font-bold"> Our Story</h1>
             <ArrowRight size={36}/>
-        </div>
+        </motion.div>
 
         <div class="w-3/5">
             <p class="text-md  text-neutral-800 "> Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills.Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills.</p>
         </div>
         
-    </div>
+    </motion.div>
 
     <!--Mission-->
 
-    <div class="flex justify-center w-full h-[280px] items-center bg-white/10">
+    <motion.div 
+        initial={{opacity:0, y:-30}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:1.5, type:'spring'}}
+        client:load
+        className="flex justify-center w-full h-[280px] items-center bg-white/10">
 
         <div class="w-[360px] h-[240px] bg-white/15 flex justify-center items-center rounded-lg">
             <div class=" flex flex-col justify-around p-4 items-center w-[320px] h-[200px] rounded-xl  bg-white/30  text-center">
@@ -51,18 +79,23 @@ import { ArrowRight } from 'lucide-react';
 
             </div>
         </div>
-    </div>
+    </motion.div>
 
 
 
     <!--Vision-->
 
-    <div class="w-full p-8 bg-transparent text-center">
+    <motion.div 
+        initial={{opacity:0, y:-30}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:1.5, type:'spring'}}
+        client:load
+        className="w-full p-8 bg-transparent text-center">
 
         <h1 class='text-3xl'>Our <span class="font-bold">Vision</span></h1>
         <p class="text-md py-4">A nation where every person can experience the music of their choosing and every child believes that they can unite their community.</p>
 
-    </div>
+    </motion.div>
 
     
 

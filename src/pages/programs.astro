@@ -5,12 +5,20 @@ import Frame from '../layouts/frame.astro';
 
 import { ConcertsPie } from '../components/ui/pie-chart'
 
+import { motion } from 'framer-motion';
+
 ---
 
 <Frame>
 
     <!--Header -->
-    <div class="bg-transparent p-2 pb-12 w-full h-[24rem] text-center flex flex-col items-center justify-end">
+    <motion.div
+        initial={{opacity:0, y:-30}}
+        animate={{opacity:1, y:0}}
+        transition={{duration:1.5, type:'spring'}}
+        client:load
+    
+        className="bg-transparent p-2 pb-12 w-full h-[24rem] text-center flex flex-col items-center justify-end">
         
         <div class="flex flex-row justify-center items-center w-[480px]">
             
@@ -21,10 +29,15 @@ import { ConcertsPie } from '../components/ui/pie-chart'
         <h1 class="text-[2.8rem] text-neutral-900 font-bold ">Our Programs</h1>
 
 
-    </div>
+    </motion.div>
 
     <!--Concerts -->
-    <div class="w-full text-left mt-[-24px] bg-white/20 p-8 rounded-t-3xl">
+    <motion.div 
+        initial={{opacity:0, y:-20}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:1.5, type:'spring'}}
+        client:load
+        className="w-full text-left mt-[-24px] bg-white/20 p-8 rounded-t-3xl">
         <h1 class='text-xl font-bold'>Concerts</h1>
         <div class="p-4">
 
@@ -38,17 +51,23 @@ import { ConcertsPie } from '../components/ui/pie-chart'
 
         </div>
         
-    </div>
+    </motion.div>
 
     <!--Education -->
-    <div class="w-full text-right mt-[-24px] bg-white/20 p-8 rounded-t-3xl">
+    <motion.div 
+        initial={{opacity:0, y:-20}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:1.5, type:'spring'}}
+        client:load
+    
+        className="w-full text-right mt-[-24px] bg-white/20 p-8 rounded-t-3xl">
         <h1 class='text-xl font-bold'>Education</h1>
         
         <div class="p-4">
             <p>Our education program provides opportunities for high school musicians to share their love of music while giving back.</p>
             
         </div>
-    </div>
+    </motion.div>
 
 
 </Frame>
