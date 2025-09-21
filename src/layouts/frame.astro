@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 
-import Analytics from '@vercel/analytics'
+import { Analytics } from '@vercel/analytics/react'
 
 import Footer from '../components/footer';
 import Header from '../components/header';
@@ -10,13 +10,14 @@ import FloatingNavigation from '../components/nav';
 const { title, icon } = Astro.params;
 ---
 
-<html class="scroll-smooth">
+<html class="scroll-smooth !overflow-x-hidden !max-w-[100vw] ">
   <head>
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{ title }</title>
   </head>
-  <body class='w-full h-full bg-[url(/images/bg.png)] bg-cover  '>
+  <body class='w-full h-full bg-[url(/images/bg.png)] bg-cover overflow-x-hidden  '>
+    <Analytics/>
     <div class="backdrop-blur-xl">
 
       <Header client:load/>
