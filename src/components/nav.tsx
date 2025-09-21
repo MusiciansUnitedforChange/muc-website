@@ -11,7 +11,7 @@ const FloatingNavigation: React.FC = () => {
 
     return (
 
-    <div className='z-[9] bg-trnsparent overflow-visible w-full fixed bottom-6 flex flex-row justify-around md:hidden '>
+    <div className='z-[9] bg-trnsparent h-[60px] overflow-visible w-full fixed bottom-6 flex flex-row justify-around md:hidden '>
         <motion.div 
 
             initial={{y:100}}
