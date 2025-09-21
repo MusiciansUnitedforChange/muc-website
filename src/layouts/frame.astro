@@ -17,7 +17,7 @@ const { title, icon } = Astro.params;
   <body class='w-full h-full bg-[url(/images/bg.png)] bg-cover  '>
     <div class="backdrop-blur-xl">
 
-      <Header/>
+      <Header client:load/>
       <main class=''>
         <slot/>
       </main> 

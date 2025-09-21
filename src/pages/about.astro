@@ -25,11 +25,11 @@ import { motion } from 'framer-motion';
         
         <div class="flex flex-row w-[480px] justify-center items-center">
             
-            <h2 class='p-2 text-neutral-800 text-[1.2rem] w-1/2'>What a little bit of music can do for a young mind</h2>
+            <h2 class='p-2 text-neutral-800 text-[18px] md:text-[24px] lg:text-[30px] w-1/2 md:w-[300px] lg:w-[360px]'>What a little bit of music can do for a young mind</h2>
 
         </div>
         
-        <h1 class="text-[4rem] text-neutral-900 font-bold ">About Us</h1>
+        <h1 class="text-[44px] md:text-[64px] lg:text-[96px] text-neutral-900 font-bold ">About Us</h1>
 
 
     </motion.div>
@@ -41,7 +41,7 @@ import { motion } from 'framer-motion';
         animate={{opacity:1}}
         transition={{duration:1.5, type:'spring'}}
         client:load
-        className="relative w-full p-8 bg-transparent mt-[-24px] flex flex-row justify-between">
+        className="relative w-full p-8 bg-transparent mt-[-24px] flex flex-row justify-between lg:justify-around ">
 
         <motion.div 
             initial={{x:-20}}
@@ -52,12 +52,12 @@ import { motion } from 'framer-motion';
             className="z-10 sticky self-start top-0 flex flex-col items-center p-2 w-1/5 ">
             <h1 
                 
-                class="text-xl font-bold"> Our Story</h1>
-            <ArrowRight size={36}/>
+                class="text-xl md:text-[24px] lg:text-[36px] font-bold pb-4"> Our Story</h1>
+            <ArrowRight size={64}/>
         </motion.div>
 
         <div class="w-3/5">
-            <p class="text-md  text-neutral-800 "> Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills.Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills.</p>
+            <p class="text-md md:text-[20px] lg:text-[36px]  text-neutral-800 "> Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills.Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills.</p>
         </div>
         
     </motion.div>
@@ -69,13 +69,13 @@ import { motion } from 'framer-motion';
         whileInView={{opacity:1, y:0}}
         transition={{duration:1.5, type:'spring'}}
         client:load
-        className="flex justify-center w-full h-[280px] items-center bg-white/10">
+        className="flex justify-center w-full h-[280px] md:h-[360px] lg:h-[580px] items-center bg-white/10">
 
-        <div class="w-[360px] h-[240px] bg-white/15 flex justify-center items-center rounded-lg">
-            <div class=" flex flex-col justify-around p-4 items-center w-[320px] h-[200px] rounded-xl  bg-white/30  text-center">
+        <div class="w-[360px] md:w-[420px] lg:w-[560px] aspect-[4/3] bg-white/15 flex justify-center items-center rounded-lg">
+            <div class=" flex flex-col justify-around p-4 items-center w-[320px] md:w-[360px] lg:w-[480px] aspect-[4/3] rounded-xl  bg-white/30  text-center">
 
-                <h1 class='text-3xl'>Our <span class="font-bold">Mission</span></h1>
-                <p class="text-md ">At MUC we strive to inspire solidarity, transcend demographics, and spread joy through the universal language of music.</p>
+                <h1 class='text-[44px] lg:text-[64px]'>Our <span class="font-bold">Mission</span></h1>
+                <p class="text-md lg:text-[24px] ">At MUC we strive to inspire solidarity, transcend demographics, and spread joy through the universal language of music.</p>
 
             </div>
         </div>
@@ -90,10 +90,10 @@ import { motion } from 'framer-motion';
         whileInView={{opacity:1, y:0}}
         transition={{duration:1.5, type:'spring'}}
         client:load
-        className="w-full p-8 bg-transparent text-center">
+        className="w-full p-8 bg-transparent text-center flex items-center flex-col">
 
-        <h1 class='text-3xl'>Our <span class="font-bold">Vision</span></h1>
-        <p class="text-md py-4">A nation where every person can experience the music of their choosing and every child believes that they can unite their community.</p>
+        <h1 class='text-[44px] lg:text-[64px]'>Our <span class="font-bold">Vision</span></h1>
+        <p class="text-md lg:text-[24px] p-4 lg:p-8 lg:w-1/2 ">A nation where every person can experience the music of their choosing and every child believes that they can unite their community.</p>
 
     </motion.div>
 

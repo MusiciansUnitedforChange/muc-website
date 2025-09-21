@@ -1,4 +1,4 @@
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+import { ArrowRight } from "lucide-react";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -60,10 +60,10 @@ const BentoCard = ({
     <div className="p-4 bg-white">
       <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 transition-all duration-300 lg:group-hover:-translate-y-10">
         <Icon className="h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75" />
-        <h3 className="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
+        <h3 className="text-xl md:text-[30px] lg:text-[40px] lg:py-2 font-semibold text-neutral-700 dark:text-neutral-300">
           {name}
         </h3>
-        <p className="max-w-lg text-sm text-neutral-400">{description}</p>
+        <p className="max-w-lg text-sm lg:text-xl lg:py-2 text-neutral-400">{description}</p>
       </div>
 
       <div
@@ -75,11 +75,11 @@ const BentoCard = ({
           variant="link"
           asChild
           size="sm"
-          className="pointer-events-auto p-0"
+          className="pointer-events-auto p-0 "
         >
-          <a href={href}>
+          <a href={href} className='lg-text-xl text-md px-0 '>
             {cta}
-            <ArrowRightIcon className="ms-2 h-4 w-4 rtl:rotate-180" />
+            <ArrowRight className="ms-2 w-8 h-8  rtl:rotate-180" />
           </a>
         </Button>
       </div>
@@ -94,11 +94,11 @@ const BentoCard = ({
         variant="link"
         asChild
         size="sm"
-        className="pointer-events-auto p-0"
+        className="pointer-events-auto p-0 "
       >
-        <a href={href}>
+        <a href={href} className='lg:text-xl text-md '>
           {cta}
-          <ArrowRightIcon className="ms-2 h-4 w-4 rtl:rotate-180" />
+          <ArrowRight className="ms-2 w-8 h-8 rtl:rotate-180" />
         </a>
       </Button>
     </div>

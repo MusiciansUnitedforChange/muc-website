@@ -11,18 +11,18 @@ const FloatingNavigation: React.FC = () => {
 
     return (
 
-    <div className='z-[9999] bg-transparent overflow-visible w-full fixed bottom-6 flex flex-row justify-around md:visible'>
+    <div className='z-[9] bg-trnsparent overflow-visible w-full fixed bottom-6 flex flex-row justify-around md:hidden '>
         <motion.div 
 
             initial={{y:100}}
             animate={{y:0}}
             transition={{duration:1.5, type:'spring'}}
         
-            className='w-2/3 h-[64px] flex flex-row justify-center items-center gap-x-8 bg-white shadow-2xl shadow-gray-900 rounded-3xl'>
+            className='w-2/3 flex flex-row justify-center items-center gap-x-8 bg-white shadow-2xl shadow-gray-900 rounded-3xl md:gap-16 md:rounded-[36px]'>
              
              <a href='/'><Home/></a>
              <CalendarDialog/>
-             <MessageCircleQuestion/>
+             <MessageCircleQuestion className='hidden'/>
 
         </motion.div>
     </div>
