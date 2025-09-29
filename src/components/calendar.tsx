@@ -32,7 +32,7 @@ const CalendarDialog : React.FC = () =>{
                 </DialogDescription>
                 </DialogHeader>
                 
-                <iframe className='w-full max-w-none h-[360px] md:h-[540px] lg:h[600px] xl:h-[720px] ring-4 ring-[#f0f4f9] ring-offset-2 rounded-3xl' src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FDenver"/>
+                <iframe className='w-full max-w-none h-[360px] md:h-[540px] lg:h[600px] xl:h-[720px] ring-4 ring-[#f0f4f9] ring-offset-2 rounded-3xl' src="https://calendar.google.com/calendar/embed?src=musiciansunitedforchangemuc%40gmail.com&ctz=America%2FDenver"/>
             </DialogContent>
         </Dialog>
 

@@ -10,15 +10,8 @@ import { motion } from 'framer-motion';
 
 <Frame>
 
-    <motion.div 
-        initial={{opacity:0, y:20}} 
-        animate={{opacity:1, y:0}} 
-        transition={{duration:0.7, type:'spring'}} 
     
-        className='w-[100px] h-[200px] bg-blue-500'
-
-        client:load
-    
-    ><h1>Hello world</h1>
-    </motion.div>
+    <div class='relative w-full h-[300vh] bg-red-300 '>
+        <div class="sticky z-10 top-0 w-full h-[100px] bg-blue-300"></div>
+    </div>
 </Frame>
