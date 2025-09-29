@@ -9,6 +9,8 @@ import ImpactDialog from '@/components/impactdialog';
 
 import { motion } from 'framer-motion';
 
+import TemplateContent from '@/components/impacts/template.md?raw';
+
 ---
 
 <Frame>
@@ -44,7 +46,7 @@ import { motion } from 'framer-motion';
         <div class="p-4 md:text-[20px] lg:text-[24px] flex justify-between">
 
             <div class="w-3/4 text-left ">
-                <p>During COVID, MUC organized two virtual benefit concerts for the Food Bank of the Rockies.During COVID, MUC organized two virtual benefit concerts for the Food Bank of the Rockies.During COVID, MUC organized two virtual benefit concerts for the Food Bank of the Rockies.</p>
+                <p>We bring live music directly into the community, with regular performances at senior living residences and local venues. In each performance, we strive to foster a space of vulnerability and connection, where music becomes more than sound, but rather a shared experience of hope and humanity. </p>
             </div>
 
             <!--Stats -->
@@ -68,7 +70,7 @@ import { motion } from 'framer-motion';
         <h1 class='text-xl md:text-[30px] lg:text-[36px] font-bold'>Education</h1>
         
         <div class="p-4 md:text-[20px] lg:text-[24px] text-right">
-            <p>Our education program provides opportunities for high school musicians to share their love of music while giving back.</p>
+            <p>Beyond performance, we’re committed to nurturing the next generation of musicians. Our music education program offers mentorship and support for young students, giving them the tools to grow both as artists and as leaders. By encouraging creativity and collaboration, we strive to ensure that the spirit of music continues to inspire for years to come.</p>
             
         </div>
     </motion.div>
@@ -89,11 +91,10 @@ import { motion } from 'framer-motion';
 
         <!--Marquee -->
         <Marquee className='py-4 p-none lg:py-8 w-full !overflow-x-hidden'>
-            <ImpactDialog event='Eric Kim' date='President' previewimg='https://broomfieldsymphony.org/wp-content/uploads/2022/03/broomfield-symphony-youth-concerto-winner-eric-kim.jpg' previewalt='Image of Eric Kim' client:load/>
-            <ImpactDialog event='Eric Kim' date='President' previewimg='https://broomfieldsymphony.org/wp-content/uploads/2022/03/broomfield-symphony-youth-concerto-winner-eric-kim.jpg' previewalt='Image of Eric Kim' client:load/>
-            <ImpactDialog event='Eric Kim' date='President' previewimg='https://broomfieldsymphony.org/wp-content/uploads/2022/03/broomfield-symphony-youth-concerto-winner-eric-kim.jpg' previewalt='Image of Eric Kim' client:load/>
-
-
+            <ImpactDialog event='First Musicians United for Change Young Artists Benefit Concert' date='04/01/2021' previewimg='public/images/EventImages/BenefitConcert.png' previewalt='Image of MUC event at ... ' description={TemplateContent} client:load/>
+            <ImpactDialog event='Kavod Concert + CPR News Feature' date='12/11/2023' previewimg='public/images/EventImages/IMG_4301.jpg' previewalt='Image of MUC event at ... ' description={TemplateContent} client:load/>
+            <ImpactDialog event='Concert at the Inn at Greenwood Village' date='08/23/2025' previewimg='public/images/EventImages/IMG_2437.jpg' previewalt='Image of MUC event at ... ' description={TemplateContent} client:load/>
+            <ImpactDialog event='MUC Reunion!' date='08/30/2025' previewimg='public/images/EventImages/IMG_1334.jpg' previewalt='Image of MUC event at ... ' description={TemplateContent} client:load/>
         </Marquee>
 
     </motion.div>

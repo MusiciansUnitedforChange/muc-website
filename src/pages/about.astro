@@ -2,7 +2,7 @@
 import '../styles/global.css';
 
 import Frame from '../layouts/frame.astro';
-import { Marquee } from '../components/magicui/marquee.tsx';
+import { Marquee } from '../components/magicui/marquee';
 
 import { ArrowRight } from 'lucide-react';
 
@@ -38,28 +38,26 @@ import { motion } from 'framer-motion';
 
     <motion.div
         initial={{opacity:0}}
-        animate={{opacity:1}}
-        transition={{duration:1.5, type:'spring'}}
+        whileInView={{opacity:1}}
+        transition={{duration:1.5, type:'sticky'}}
         client:load
-        className="relative w-full p-8 bg-transparent mt-[-24px] flex flex-row justify-between lg:justify-around ">
+    >
+            <div
+                class="relative w-full h-auto p-8 bg-transparent mt-[-24px] flex flex-row justify-between lg:justify-around ">
 
-        <motion.div 
-            initial={{x:-20}}
-            whileInView={{x:0}}
-            transition={{duration:1.5, type:'spring'}}
-            client:load
+                <div
+                    class="z-10 sticky self-start top-0 flex flex-col items-center p-2 w-1/5 ">
+                    <h1 
+                        
+                        class="text-xl md:text-[24px] lg:text-[36px] font-bold pb-4 leading-[40px] itext-center"> Our Story</h1>
+                    <ArrowRight size={64}/>
+                </div>
 
-            className="z-10 sticky self-start top-0 flex flex-col items-center p-2 w-1/5 ">
-            <h1 
+                <div class="w-3/5">
+                    <p class="text-md md:text-[20px] lg:text-[36px]  text-neutral-800 "> Musicians United for Change began in Colorado, when a group of high schoolers hosted a benefit concert during the pandemic. That single online performance raised over 19,500 meals for the Food Bank of the Rockies, showing us the power to inspire and spread hope through music. What started as one event has grown into regular live concerts at senior living communities and a music education program that supports the next generation of musicians. We believe in sharing the universal language of music with all.</p>
+                </div>
                 
-                class="text-xl md:text-[24px] lg:text-[36px] font-bold pb-4"> Our Story</h1>
-            <ArrowRight size={64}/>
-        </motion.div>
-
-        <div class="w-3/5">
-            <p class="text-md md:text-[20px] lg:text-[36px]  text-neutral-800 "> Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills.Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills. Musicians United for Change found its roots in talented individuals sharing their skills.</p>
-        </div>
-        
+            </div>
     </motion.div>
 
     <!--Mission-->
