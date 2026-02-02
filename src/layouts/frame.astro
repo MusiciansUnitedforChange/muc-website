@@ -1,15 +1,12 @@
 ---
 import '../styles/global.css';
 
-import { inject } from '@vercel/analytics';
-
 import Footer from '../components/footer';
 import Header from '../components/header';
 import FloatingNavigation from '../components/nav';
 
 const { title, icon } = Astro.params;
 
-inject();
 ---
 
 <html class="scroll-smooth ">
@@ -29,6 +26,5 @@ inject();
 
     <FloatingNavigation client:load/>
     <Footer client:load/>
-
   </body>
 </html>
