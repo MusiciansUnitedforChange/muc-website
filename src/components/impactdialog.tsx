@@ -69,6 +69,7 @@ const ImpactDialog : React.FC<ImpactDialogProps> = ({event,date, blurb, descript
                             className='w-full lg:w-[480px] xl:w-[540px]'
                             src={previewimg} alt={previewalt}/>
 
+{/*
                         <motion.div 
                             initial={{opacity:0, y:20}}
                             animate={{opacity:1, y:0}}
@@ -76,7 +77,7 @@ const ImpactDialog : React.FC<ImpactDialogProps> = ({event,date, blurb, descript
                             className='!prose max-w-none pt-4 '> 
                             <ReactMarkdown remarkPlugins={[remarkGfm]}>{description}</ReactMarkdown>
                         </motion.div>
-
+*/}
                         
                     
                         
