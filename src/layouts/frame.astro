@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 
-import { inject } from '@vercel/analytics';
+import {Analytics} from '@vercel/analytics/next';
 
 import Footer from '../components/footer';
 import Header from '../components/header';
@@ -29,6 +29,6 @@ inject();
 
     <FloatingNavigation client:load/>
     <Footer client:load/>
-
+    <Analytics />
   </body>
 </html>
